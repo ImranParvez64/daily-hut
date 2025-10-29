@@ -1,14 +1,17 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Quicksand, Lato } from "next/font/google";
 import "./globals.css";
+import Header from "@/Components/Shared/Header";
+import Footer from "@/Components/Shared/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const quickSand = Quicksand({
+  variable: "--font-quicksand",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const lato = Lato({
+  variable: "--font-lato",
   subsets: ["latin"],
+  weight: ['100', '300','400', '700', '900'],
 });
 
 export const metadata = {
@@ -20,9 +23,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${quickSand.variable} ${lato.variable} antialiased`}
       >
+        <Header></Header>
         {children}
+        <Footer></Footer>
       </body>
     </html>
   );

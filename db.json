@@ -1,0 +1,464 @@
+{
+  "categories": [
+  {
+    "id": 1,
+    "name": "Fruits & Vegetables",
+    "img": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/cat-5.png",
+    "bgColor": "#F0E8D5",
+    "items": 98,
+    "subcategories": [
+      "Fresh Fruits",
+      "Fresh Vegetables",
+      "Herbs & Seasoning",
+      "Organic Produce"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Rice, Flour & Pulses",
+    "img": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/cat-3.png",
+    "bgColor": "#E7EAF3",
+    "items": 112,
+    "subcategories": [
+      "Rice",
+      "Flour & Atta",
+      "Lentils (Dal)",
+      "Chickpeas & Beans"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Oil, Ghee & Spices",
+    "img": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/cat-14.png",
+    "bgColor": "#F3E8E8",
+    "items": 87,
+    "subcategories": [
+      "Cooking Oil",
+      "Ghee & Butter",
+      "Masala & Spices",
+      "Salt & Sugar"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Snacks & Beverages",
+    "img": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/cat-7.png",
+    "bgColor": "#D8EBE5",
+    "items": 134,
+    "subcategories": [
+      "Chips & Biscuits",
+      "Soft Drinks",
+      "Tea & Coffee",
+      "Juices & Energy Drinks"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Dairy & Bakery",
+    "img": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/cat-3.png",
+    "bgColor": "#FFF3E2",
+    "items": 76,
+    "subcategories": [
+      "Milk & Yogurt",
+      "Cheese & Butter",
+      "Bread & Buns",
+      "Cakes & Pastries"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Meat, Fish & Eggs",
+    "img": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/cat-8.png",
+    "bgColor": "#E8F4F8",
+    "items": 59,
+    "subcategories": [
+      "Fresh Meat",
+      "Frozen Fish",
+      "Eggs",
+      "Processed Meat"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Household & Cleaning",
+    "img": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/cat-11.png",
+    "bgColor": "#F8EDEB",
+    "items": 91,
+    "subcategories": [
+      "Detergents",
+      "Dishwash & Cleaners",
+      "Toilet Cleaners",
+      "Air Fresheners"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Personal Care",
+    "img": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/cat-12.png",
+    "bgColor": "#E9F7EF",
+    "items": 103,
+    "subcategories": [
+      "Soap & Body Wash",
+      "Shampoo & Conditioner",
+      "Toothpaste & Oral Care",
+      "Skin Care"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Baby & Kids",
+    "img": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/cat-13.png",
+    "bgColor": "#FDEEF4",
+    "items": 68,
+    "subcategories": [
+      "Baby Food",
+      "Diapers",
+      "Baby Soap & Lotion",
+      "Baby Accessories"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Stationery & Others",
+    "img": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/cat-14.png",
+    "bgColor": "#EEF6FF",
+    "items": 84,
+    "subcategories": [
+      "Pen & Notebook",
+      "Battery & Bulb",
+      "Plastic Products",
+      "Kitchen Accessories"
+    ]
+  }
+]
+
+,
+  "offer":[
+  {
+    "id": 1,
+    "titlePart1": "Everyday Fresh & Clean",
+    "titlePart2": "with Our Products",
+    "img": "https://nest-frontend-v6.vercel.app/assets/imgs/banner/banner-1.png",
+    "bgColor": "#F0E8D5"
+  },
+  {
+    "id": 2,
+    "titlePart1": "Start Your Day Fresh",
+    "titlePart2": "with Our Products",
+    "img": "https://nest-frontend-v6.vercel.app/assets/imgs/banner/banner-2.png",
+    "bgColor": "#F3E8E8"
+  },
+  {
+    "id": 3,
+    "titlePart1": "Clean Living Made",
+    "titlePart2": "Simple",
+    "img": "https://nest-frontend-v6.vercel.app/assets/imgs/banner/banner-3.png",
+    "bgColor": "#E7EAF3"
+  },
+  {
+    "id": 4,
+    "titlePart1": "Freshness You Can Feel",
+    "titlePart2": "Every Day",
+    "img": "https://example.com/image4.jpg",
+    "bgColor": "#D8EBE5"
+  },
+  {
+    "id": 5,
+    "titlePart1": "Pure & Natural Clean",
+    "titlePart2": "for Your Home",
+    "img": "https://example.com/image5.jpg",
+    "bgColor": "#FFE5D9"
+  },
+  {
+    "id": 6,
+    "titlePart1": "Hygiene Meets Quality",
+    "titlePart2": "in Every Product",
+    "img": "https://example.com/image6.jpg",
+    "bgColor": "#E0F7FA"
+  },
+  {
+    "id": 7,
+    "titlePart1": "Make Every Day",
+    "titlePart2": "a Fresh Start",
+    "img": "https://example.com/image7.jpg",
+    "bgColor": "#FFF0F5"
+  },
+  {
+    "id": 8,
+    "titlePart1": "Your Daily Dose",
+    "titlePart2": "of Cleanliness",
+    "img": "https://example.com/image8.jpg",
+    "bgColor": "#F5F5DC"
+  },
+  {
+    "id": 9,
+    "titlePart1": "From Our Home to Yours",
+    "titlePart2": "Fresh & Clean",
+    "img": "https://example.com/image9.jpg",
+    "bgColor": "#E6F2FF"
+  },
+  {
+    "id": 10,
+    "titlePart1": "Experience Everyday",
+    "titlePart2": "Freshness",
+    "img": "https://example.com/image10.jpg",
+    "bgColor": "#F0FFF0"
+  }
+]
+
+,
+  "products": [
+    {
+      "id": 1,
+      "name": "Fresh Apples Pack",
+      "img1": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-1-1.jpg",
+      "img2": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-1-2.jpg",
+      "badge": "Hot",
+      "price": 120,
+      "oldPrice": 145,
+      "rating": 4.6,
+      "category": "Fruits & Vegetables",
+      "shop": "Daily Hut",
+      "description": "Crisp and juicy fresh apples handpicked from organic farms. Perfect for a healthy snack or fresh juice.",
+      "packagingDelivery": "Packed carefully to maintain freshness. Delivery within 24 hours inside the city.",
+      "type": "Organic",
+      "mfg": "Jun 4, 2024",
+      "life": "70 days",
+      "sku": "FWM15VKT",
+      "tags": ["Fruit", "Organic", "Healthy"],
+      "stock": 8,
+      "sizes": ["50g", "60g", "80g", "100g", "150g"]
+    },
+    {
+      "id": 2,
+      "name": "Organic Mixed Vegetables",
+      "img1": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-2-1.jpg",
+      "img2": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-2-2.jpg",
+      "badge": "22% Off",
+      "price": 180,
+      "oldPrice": 230,
+      "rating": 4.4,
+      "category": "Fruits & Vegetables",
+      "shop": "Daily Hut",
+      "description": "A pack of fresh organic vegetables — carrots, beans, and cauliflower. Great for daily cooking.",
+      "packagingDelivery": "Delivered fresh every morning. Refrigerated packaging for longer shelf life.",
+      "type": "Organic",
+      "mfg": "May 29, 2024",
+      "life": "60 days",
+      "sku": "VEG22MIX",
+      "tags": ["Vegetable", "Organic", "Green"],
+      "stock": 12,
+      "sizes": ["250g", "500g", "1kg"]
+    },
+    {
+      "id": 3,
+      "name": "Premium Basmati Rice",
+      "img1": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-3-1.jpg",
+      "img2": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-3-2.jpg",
+      "badge": "Best Seller",
+      "price": 95,
+      "oldPrice": 120,
+      "rating": 4.7,
+      "category": "Rice, Flour & Pulses",
+      "shop": "Daily Hut",
+      "description": "Long grain, aromatic basmati rice. Perfect for biryani and other traditional dishes.",
+      "packagingDelivery": "Packed in moisture-proof bags. Fast delivery in 2 days.",
+      "type": "Organic",
+      "mfg": "Apr 18, 2024",
+      "life": "180 days",
+      "sku": "RICE90PKT",
+      "tags": ["Rice", "Organic", "Basmati"],
+      "stock": 15,
+      "sizes": ["1kg", "2kg", "5kg"]
+    },
+    {
+      "id": 4,
+      "name": "Pure Wheat Atta",
+      "img1": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-4-1.jpg",
+      "img2": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-4-2.jpg",
+      "badge": "New",
+      "price": 75,
+      "oldPrice": 95,
+      "rating": 4.3,
+      "category": "Rice, Flour & Pulses",
+      "shop": "Daily Hut",
+      "description": "100% natural whole wheat flour for soft and healthy chapatis every day.",
+      "packagingDelivery": "Air-tight sealed packaging. Delivery within 2 days.",
+      "type": "Organic",
+      "mfg": "May 2, 2024",
+      "life": "90 days",
+      "sku": "ATTA04PWT",
+      "tags": ["Flour", "Wheat", "Healthy"],
+      "stock": 20,
+      "sizes": ["1kg", "2kg", "5kg"]
+    },
+    {
+      "id": 5,
+      "name": "Premium Mustard Oil",
+      "img1": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-5-1.jpg",
+      "img2": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-5-2.jpg",
+      "badge": "Hot",
+      "price": 210,
+      "oldPrice": 250,
+      "rating": 4.5,
+      "category": "Oil, Ghee & Spices",
+      "shop": "Daily Hut",
+      "description": "Cold-pressed pure mustard oil for authentic flavor and health benefits.",
+      "packagingDelivery": "Delivered in leak-proof bottles with safety seal.",
+      "type": "Organic",
+      "mfg": "Jun 10, 2024",
+      "life": "120 days",
+      "sku": "MUSTOIL20",
+      "tags": ["Oil", "Mustard", "Organic"],
+      "stock": 14,
+      "sizes": ["500ml", "1L", "2L"]
+    },
+    {
+      "id": 6,
+      "name": "Mixed Spices Combo Pack",
+      "img1": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-6-1.jpg",
+      "img2": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-6-2.jpg",
+      "badge": "22% Off",
+      "price": 130,
+      "oldPrice": 160,
+      "rating": 4.2,
+      "category": "Oil, Ghee & Spices",
+      "shop": "Daily Hut",
+      "description": "A curated mix of 5 essential Indian spices for everyday cooking.",
+      "packagingDelivery": "Sealed glass jars to preserve aroma. Delivery in 2–3 days.",
+      "type": "Organic",
+      "mfg": "Jun 1, 2024",
+      "life": "180 days",
+      "sku": "SPC15PACK",
+      "tags": ["Spices", "Combo", "Flavor"],
+      "stock": 9,
+      "sizes": ["Small", "Medium", "Large"]
+    },
+    {
+      "id": 7,
+      "name": "Crunchy Potato Chips",
+      "img1": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-7-1.jpg",
+      "img2": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-7-2.jpg",
+      "badge": "Hot",
+      "price": 60,
+      "oldPrice": 75,
+      "rating": 4.1,
+      "category": "Snacks & Beverages",
+      "shop": "Daily Hut",
+      "description": "Thinly sliced crispy potato chips seasoned with Himalayan salt.",
+      "packagingDelivery": "Sealed foil packs to preserve crunchiness.",
+      "type": "Snack",
+      "mfg": "Jul 15, 2024",
+      "life": "90 days",
+      "sku": "CHP07CRSP",
+      "tags": ["Snack", "Chips", "Salty"],
+      "stock": 25,
+      "sizes": ["50g", "100g", "150g"]
+    },
+    {
+      "id": 8,
+      "name": "Energy Drink Boost",
+      "img1": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-8-1.jpg",
+      "img2": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-8-2.jpg",
+      "badge": "New",
+      "price": 110,
+      "oldPrice": 135,
+      "rating": 4.3,
+      "category": "Snacks & Beverages",
+      "shop": "Daily Hut",
+      "description": "Refreshing energy drink with vitamins and electrolytes to keep you active all day.",
+      "packagingDelivery": "Delivered chilled in insulated boxes.",
+      "type": "Drink",
+      "mfg": "Jun 30, 2024",
+      "life": "120 days",
+      "sku": "ENG08BST",
+      "tags": ["Beverage", "Energy", "Drink"],
+      "stock": 18,
+      "sizes": ["250ml", "500ml", "1L"]
+    },
+    {
+      "id": 9,
+      "name": "Fresh Dairy Milk",
+      "img1": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-9-1.jpg",
+      "img2": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-9-2.jpg",
+      "badge": "Best Seller",
+      "price": 90,
+      "oldPrice": 110,
+      "rating": 4.7,
+      "category": "Dairy & Bakery",
+      "shop": "Daily Hut",
+      "description": "Pure and fresh dairy milk collected from local organic farms.",
+      "packagingDelivery": "Delivered in refrigerated boxes within 12 hours.",
+      "type": "Dairy",
+      "mfg": "Jul 20, 2024",
+      "life": "7 days",
+      "sku": "MLK09DRY",
+      "tags": ["Milk", "Fresh", "Organic"],
+      "stock": 30,
+      "sizes": ["250ml", "500ml", "1L"]
+    },
+    {
+      "id": 10,
+      "name": "Butter Croissant",
+      "img1": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-10-1.jpg",
+      "img2": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-10-2.jpg",
+      "badge": "22% Off",
+      "price": 140,
+      "oldPrice": 180,
+      "rating": 4.5,
+      "category": "Dairy & Bakery",
+      "shop": "Daily Hut",
+      "description": "Flaky, buttery croissants baked fresh daily for your morning coffee.",
+      "packagingDelivery": "Eco-friendly box packaging. Delivered same day.",
+      "type": "Bakery",
+      "mfg": "Aug 10, 2024",
+      "life": "5 days",
+      "sku": "BKR10CRS",
+      "tags": ["Bakery", "Croissant", "Fresh"],
+      "stock": 16,
+      "sizes": ["1pc", "3pcs", "6pcs"]
+    },
+     {
+      "id": 11,
+      "name": "Fresh Apples Pack",
+      "img1": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-1-1.jpg",
+      "img2": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-1-2.jpg",
+      "badge": "Hot",
+      "price": 120,
+      "oldPrice": 145,
+      "rating": 4.6,
+      "category": "Fruits & Vegetables",
+      "shop": "Daily Hut",
+      "description": "Crisp and juicy fresh apples handpicked from organic farms. Perfect for a healthy snack or fresh juice.",
+      "packagingDelivery": "Packed carefully to maintain freshness. Delivery within 24 hours inside the city.",
+      "type": "Organic",
+      "mfg": "Jun 4, 2024",
+      "life": "70 days",
+      "sku": "FWM15VKT",
+      "tags": ["Fruit", "Organic", "Healthy"],
+      "stock": 8,
+      "sizes": ["50g", "60g", "80g", "100g", "150g"]
+    },
+    {
+      "id": 12,
+      "name": "Organic Mixed Vegetables",
+      "img1": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-2-1.jpg",
+      "img2": "https://nest-frontend-v6.vercel.app/assets/imgs/shop/product-2-2.jpg",
+      "badge": "22% Off",
+      "price": 180,
+      "oldPrice": 230,
+      "rating": 4.4,
+      "category": "Fruits & Vegetables",
+      "shop": "Daily Hut",
+      "description": "A pack of fresh organic vegetables — carrots, beans, and cauliflower. Great for daily cooking.",
+      "packagingDelivery": "Delivered fresh every morning. Refrigerated packaging for longer shelf life.",
+      "type": "Organic",
+      "mfg": "May 29, 2024",
+      "life": "60 days",
+      "sku": "VEG22MIX",
+      "tags": ["Vegetable", "Organic", "Green"],
+      "stock": 12,
+      "sizes": ["250g", "500g", "1kg"]
+    }
+  ]
+}
