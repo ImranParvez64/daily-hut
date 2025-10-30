@@ -1,4 +1,4 @@
-import { Quicksand, Lato } from "next/font/google";
+import { Quicksand} from "next/font/google";
 import "./globals.css";
 import Header from "@/Components/Shared/Header";
 import Footer from "@/Components/Shared/Footer";
@@ -8,11 +8,6 @@ const quickSand = Quicksand({
   subsets: ["latin"],
 });
 
-const lato = Lato({
-  variable: "--font-lato",
-  subsets: ["latin"],
-  weight: ['100', '300','400', '700', '900'],
-});
 
 export const metadata = {
   title: "Create Next App",
@@ -23,10 +18,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${quickSand.variable} ${lato.variable} antialiased`}
+        className={`${quickSand.variable} antialiased`}
       >
-        <Header></Header>
-        {children}
+
+          <Header></Header>
+          {children}
+
         <Footer></Footer>
       </body>
     </html>

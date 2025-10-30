@@ -3,14 +3,21 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Autoplay, Navigation } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import Image from 'next/image';
 
 export default function Hero() {
     return (
         <div>
             <div className='container mx-auto my-6 '>
-                <Swiper navigation={true} modules={[Autoplay]} className="mySwiper">
+                <Swiper modules={[Autoplay, Pagination]}
+                    spaceBetween={30}
+                    loop={true}
+                    autoplay={{
+                        delay: 2000,
+                        disableOnInteraction: false,
+                    }}
+                    pagination={{ clickable: true }} className="mySwiper">
                     <SwiperSlide className=' relative w-full h-[500px] '>
                         <Image
                             src={"https://nest-frontend-v6.vercel.app/assets/imgs/slider/slider-1.png"}
@@ -49,7 +56,7 @@ export default function Hero() {
                             </div>
                         </div>
                     </SwiperSlide>
-            
+
                     <SwiperSlide className=' relative w-full h-[500px] '>
                         <Image
                             src={"https://nest-frontend-v6.vercel.app/assets/imgs/slider/slider-2.png"}
@@ -88,7 +95,7 @@ export default function Hero() {
                             </div>
                         </div>
                     </SwiperSlide>
-                   
+
                 </Swiper>
             </div>
         </div>

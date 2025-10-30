@@ -3,7 +3,7 @@ import React from 'react';
 import TopProductsCard from './HomeComponents/TopProductsCard';
 
 const Top = async () => {
-    const response = await fetch("http://localhost:4000/products", { cache: "no-store" });
+    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/products`, { cache: "no-store" });
     const products = await response.json();
     return (
         <div className='container mx-auto'>

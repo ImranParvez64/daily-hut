@@ -5,7 +5,7 @@ import OfferCards from './HomeComponents/OfferCards';
 
 
 const Offer = async () => {
-    const res = await fetch("http://localhost:4000/offer")
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/offer`)
     const offers = await res.json();
     return (
         <div className='container mx-auto py-10'>

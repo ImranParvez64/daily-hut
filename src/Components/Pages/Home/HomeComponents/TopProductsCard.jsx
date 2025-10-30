@@ -6,7 +6,7 @@ import { FaStar } from 'react-icons/fa6';
 const TopProductsCard = ({ product }) => {
     const stars = Array.from({ length: 5 }, (_, i) => i + 1);
     return (
-        <div className='flex gap-3  p-5 cursor-pointer border border-gray-100'>
+        <div className='flex gap-3  p-5 cursor-pointer border border-gray-100 rounded-2xl'>
             <div className='shadow-sm '>
                 <Image
                     src={product.img1}

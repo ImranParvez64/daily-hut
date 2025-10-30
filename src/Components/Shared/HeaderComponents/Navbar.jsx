@@ -4,7 +4,7 @@ import { FaHeadphonesSimple } from "react-icons/fa6";
 
 
 const Navbar = async () => {
-    const res = await fetch("http://localhost:4000/categories");
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/categories`);
     const categories = await res.json();
     return (
         <div className='border-b border-b-gray-200'>
