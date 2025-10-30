@@ -1,22 +1,37 @@
-import React from 'react';
-import PopularProducts from './HomeComponents/PopularProducts';
+"use client";
 
-const Popular = async () => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/categories`, { cache: "no-store" });
-    const categories = await res.json();
+import React, { useEffect, useState } from "react";
+import PopularProducts from "./HomeComponents/PopularProducts";
 
-    
-    
+const Popular = () => {
+  const [categories, setCategories] = useState([]);
+  const [products, setProducts] = useState([]);
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/products`, { cache: "no-store" });
-    const products = await response.json();
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        // fetch categories.json from public
+        const catRes = await fetch("/categories.json", { cache: "no-store" });
+        const catData = await catRes.json();
+        setCategories(catData);
 
-    return (
-        <div className='mb-15'>
-            <PopularProducts categories={categories} products={products} />
-        
-        </div>
-    );
+        // fetch products.json from public
+        const proRes = await fetch("/products.json", { cache: "no-store" });
+        const proData = await proRes.json();
+        setProducts(proData);
+      } catch (error) {
+        console.log("Error fetching popular section data:", error);
+      }
+    };
+
+    loadData();
+  }, []);
+
+  return (
+    <div className="mb-15">
+      <PopularProducts categories={categories} products={products} />
+    </div>
+  );
 };
 
 export default Popular;

@@ -14,13 +14,15 @@ const Page = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        // API থেকে single product fetch
-        const res = await fetch(`/api/products/${id}`, { cache: "no-store" });
-        if (!res.ok) {
-          throw new Error(`Product not found (status: ${res.status})`);
-        }
+        const res = await fetch(`/products.json`, { cache: "no-store" });
+        if (!res.ok) throw new Error("File load error");
+
         const data = await res.json();
-        setProduct(data); // product state set
+        const singleProduct = data.find((p) => p.id.toString() === id);
+
+        if (!singleProduct) throw new Error("Product not found");
+
+        setProduct(singleProduct);
       } catch (err) {
         setError(err.message);
       }
@@ -34,22 +36,19 @@ const Page = () => {
 
   return (
     <div className="p-6 container mx-auto">
-      {/* Breadcrumb / Path */}
       <ProductsDetailsPath productName={product.name} />
 
       <div className="flex flex-col md:flex-row gap-6 mt-6">
-        {/* Product Image */}
         <div className="flex p-8 border border-gray-200">
           <Image
             src={product.img1 || "/placeholder.png"}
             alt={product.title}
             width={500}
             height={400}
-            className="object-cover rounded "
+            className="object-cover rounded"
           />
         </div>
 
-        {/* Product Details */}
         <div className="flex">
           <ProductDetails product={product} />
         </div>

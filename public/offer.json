@@ -1,5 +1,4 @@
-export async function GET() {
-    const offer =[
+[
   {
     "id": 1,
     "titlePart1": "Everyday Fresh & Clean",
@@ -70,7 +69,4 @@ export async function GET() {
     "img": "https://example.com/image10.jpg",
     "bgColor": "#F0FFF0"
   }
-];
-
-    return Response.json(offer);
-}
+]

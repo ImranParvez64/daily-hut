@@ -38,22 +38,7 @@ const ProductsMain = ({ categories, products }) => {
     return (
         <div className='container mx-auto py-6'>
             <div className='grid grid-cols-12 gap-8'>
-                {/* Products */}
-                <div className='col-span-8'>
-                    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
-
-                        {filterData.map(product => (
-                            <ProductsCard key={product.id} product={product} />
-                        ))}
-
-                        {filterData.length === 0 && (
-                            <p className="text-gray-500 col-span-5 text-center py-10">
-                                No products found ☹️
-                            </p>
-                        )}
-                    </div>
-                </div>
-
+               
                 {/* Sidebar Filter */}
                 <div className='col-span-4 bg-white p-5 rounded-xl shadow-lg space-y-6'>
                     <h2 className='font-bold text-lg text-gray-800 border-b pb-2'>Filter</h2>
@@ -144,6 +129,22 @@ const ProductsMain = ({ categories, products }) => {
                     </div>
 
                 </div>
+                 {/* Products */}
+                <div className='col-span-8'>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
+
+                        {filterData.map(product => (
+                            <ProductsCard key={product.id} product={product} />
+                        ))}
+
+                        {filterData.length === 0 && (
+                            <p className="text-gray-500 col-span-5 text-center py-10">
+                                No products found ☹️
+                            </p>
+                        )}
+                    </div>
+                </div>
+
 
 
             </div>

@@ -1,7 +1,8 @@
-import { Quicksand} from "next/font/google";
+import { Quicksand } from "next/font/google";
 import "./globals.css";
 import Header from "@/Components/Shared/Header";
 import Footer from "@/Components/Shared/Footer";
+import Provider from "@/redux/Provider";
 
 const quickSand = Quicksand({
   variable: "--font-quicksand",
@@ -20,11 +21,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${quickSand.variable} antialiased`}
       >
-
+        <Provider>
           <Header></Header>
           {children}
-
-        <Footer></Footer>
+          <Footer></Footer>
+        </Provider>
       </body>
     </html>
   );

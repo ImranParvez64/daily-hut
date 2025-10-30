@@ -1,5 +1,4 @@
-export async function GET() {
-  const products =  [
+ [
     {
       "id": 1,
       "name": "Fresh Apples Pack",
@@ -252,7 +251,4 @@ export async function GET() {
       "stock": 12,
       "sizes": ["250g", "500g", "1kg"]
     }
-  ];
-
-  return Response.json(products);
-}
+  ]
