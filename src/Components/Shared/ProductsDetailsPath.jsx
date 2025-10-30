@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoMdHome } from 'react-icons/io';
 
-const ProductsDetailsPath = ({ title, productName }) => {
+const ProductsDetailsPath = ({ productName }) => {
     return (
         <div>
             <div className='flex items-center gap-2 font-semibold text-[#25AD7A] py-2'>

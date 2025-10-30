@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import ProductsMain from '../../Components/Pages/ProductComponents/ProductsMain';
 import OthersHero from '@/Components/Shared/OthersHero';
 import React from 'react';

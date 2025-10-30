@@ -1,4 +1,8 @@
+export const dynamic = "force-dynamic";
+
+
 import OthersHero from "@/Components/Shared/OthersHero";
+import Image from "next/image";
 import React from "react";
 
 export default function AboutPage() {
@@ -13,10 +17,12 @@ export default function AboutPage() {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Image Area */}
         <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
-          <img
+          <Image
             src="https://images.pexels.com/photos/5632409/pexels-photo-5632409.jpeg"
-            alt="dailyhut Illustration"
+            alt="daily Illustration"
             className="w-full h-full object-cover"
+            width={300}
+            height={200}
           />
         </div>
 

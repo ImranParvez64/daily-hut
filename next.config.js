@@ -11,6 +11,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'nest-frontend-v6.vercel.app',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.pexels.com',
+      },
     ],
   },
 };

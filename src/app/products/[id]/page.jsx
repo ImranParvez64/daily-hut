@@ -35,22 +35,22 @@ const Page = () => {
   return (
     <div className="p-6 container mx-auto">
       {/* Breadcrumb / Path */}
-      <ProductsDetailsPath productName={product.title} />
+      <ProductsDetailsPath productName={product.name} />
 
       <div className="flex flex-col md:flex-row gap-6 mt-6">
         {/* Product Image */}
-        <div className="flex-1">
+        <div className="flex p-8 border border-gray-200">
           <Image
             src={product.img1 || "/placeholder.png"}
             alt={product.title}
             width={500}
             height={400}
-            className="object-cover rounded"
+            className="object-cover rounded "
           />
         </div>
 
         {/* Product Details */}
-        <div className="flex-1">
+        <div className="flex">
           <ProductDetails product={product} />
         </div>
       </div>

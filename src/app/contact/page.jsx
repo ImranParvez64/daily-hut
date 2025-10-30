@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import OthersHero from '@/Components/Shared/OthersHero';
 import React from 'react';
 
