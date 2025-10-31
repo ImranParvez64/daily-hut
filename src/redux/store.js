@@ -3,6 +3,7 @@ import offersReducer from "./slice/offerSlice";
 import productReducer from "./slice/productSlice";
 import categoriesReducer from "./slice/categoriesSlice";
 import singleProductSliceReducer from "./slice/fetchSlice";
+import addtocartReducer from "./slice/addtocartSlice";
 
 
 export const store = configureStore({
@@ -10,6 +11,7 @@ export const store = configureStore({
     offers: offersReducer,
     products: productReducer,
     categories: categoriesReducer,
-    product:singleProductSliceReducer
+    product:singleProductSliceReducer,
+    addToCart: addtocartReducer
   },
 });

@@ -1,74 +1,73 @@
-export const dynamic = "force-dynamic";
+"use client";
 
-import OthersHero from '@/Components/Shared/OthersHero';
-import React from 'react';
+import React from "react";
+import Image from "next/image";
+import OthersHero from "@/Components/Shared/OthersHero";
 
-export default function ContactPage() {
-    return (
-        <section className="mt-10 mb-20 px-6 flex flex-col items-start justify-center container mx-auto border-gray-300 bg-white relative">
+const ContactForm = () => {
+  return (
+ <div className="container mx-auto mt-6"> 
+    <OthersHero title={"Contact"}></OthersHero>
+       <div className="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-20">
+      
+      {/* Left Side: Form */}
+      <div>
+        <p className="text-green-600 font-medium mb-2">Contact form</p>
+        <h2 className="text-3xl font-bold mb-2">Drop Us a Line</h2>
+        <p className="text-gray-500 mb-6 text-sm">
+          Your email address will not be published. Required fields are marked *
+        </p>
 
-            {/* Header Center */}
-           <div className='w-full'>
-             <OthersHero title={"Contact us"}></OthersHero>
-           </div>
-           
+        <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input
+            type="text"
+            placeholder="First Name"
+            className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+          <input
+            type="email"
+            placeholder="Your Email"
+            className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+          <input
+            type="text"
+            placeholder="Your Phone"
+            className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+          <input
+            type="text"
+            placeholder="Subject"
+            className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+          <textarea
+            placeholder="Message"
+            rows="5"
+            className="border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-blue-400 md:col-span-2"
+          ></textarea>
 
-            <div className="max-w-4xl ml-70 w-full   bg-white rounded-xl grid grid-cols-1 md:grid-cols-2 overflow-hidden shadow-md mt-24">
+          <button
+            type="submit"
+            className="bg-blue-800 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-900 transition-colors md:col-span-2"
+          >
+            Send message
+          </button>
+        </form>
+      </div>
 
-                {/* Left Side - Info */}
-                <div className="text-gray-700  p-10 flex flex-col justify-between  bg-gray-50">
-                    <div>
-                        <h3 className="text-xl font-bold mb-4 text-gray-800">Get in Touch</h3>
+      {/* Right Side: Image */}
+      <div className="w-full h-full flex justify-center md:justify-end mt-40">
+        <div className="w-80 h-80 relative rounded-xl overflow-hidden shadow-lg">
+          <Image
+            src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500" // Replace with your image path
+            alt="Contact Person"
+            fill
+            className="object-cover"
+          />
+        </div>
+      </div>
+    </div>
+ </div>
+  );
+};
 
-                        <ul className="space-y-6 text-sm">
-                            <li className="flex gap-3 items-start">
-                                <span className="text-blue-600 text-lg">📍</span>
-                                <div>
-                                    <p className="font-medium">Address</p>
-                                    <p className="text-gray-600">Dhaka, Bangladesh</p>
-                                </div>
-                            </li>
-
-                            <li className="flex gap-3 items-start">
-                                <span className="text-blue-600 text-lg">📞</span>
-                                <div>
-                                    <p className="font-medium">Phone</p>
-                                    <p className="text-gray-600">+880 1780-000000</p>
-                                </div>
-                            </li>
-
-                            <li className="flex gap-3 items-start">
-                                <span className="text-blue-600 text-lg">✉</span>
-                                <div>
-                                    <p className="font-medium">Email</p>
-                                    <p className="text-gray-600">support@dailyhut.com</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div className="mt-10">
-                        <h3 className="font-semibold mb-3">Follow Us</h3>
-                        <div className="flex gap-3">
-                            <a className="w-9 h-9 flex items-center justify-center bg-white border border-gray-300 rounded-full shadow-sm hover:border-blue-600 transition">F</a>
-                            <a className="w-9 h-9 flex items-center justify-center bg-white border border-gray-300 rounded-full shadow-sm hover:border-blue-600 transition">I</a>
-                            <a className="w-9 h-9 flex items-center justify-center bg-white border border-gray-300 rounded-full shadow-sm hover:border-blue-600 transition">Y</a>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Right Side - Form */}
-                <div className="p-10">
-                    <h3 className="text-xl font-semibold text-gray-800 mb-5">Send Message</h3>
-                    <form className="space-y-4">
-                        <input type="text" placeholder="Your Name" className="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-400 outline-none" />
-                        <input type="email" placeholder="Your Email" className="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-400 outline-none" />
-                        <input type="text" placeholder="Subject" className="w-full border border-gray-300 rounded-lg p-3 text-sm focus:ring-2 focus:ring-blue-400 outline-none" />
-                        <textarea rows="5" placeholder="Message" className="w-full border border-gray-300 rounded-lg p-3 text-sm resize-none focus:ring-2 focus:ring-blue-400 outline-none"></textarea>
-                        <button className="w-full py-3 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-    )
-}
+export default ContactForm;
