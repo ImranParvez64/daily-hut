@@ -42,7 +42,7 @@ const SecondHeader = () => {
         </Link>
 
         {/* Search + Categories */}
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2 items-center translate-x-10">
 
           {/* Categories */}
           <select className="select w-40 outline-none font-bold hidden md:block">
@@ -53,7 +53,7 @@ const SecondHeader = () => {
           </select>
 
           {/* Search */}
-          <label className="input w-40 outline-none flex-1">
+          <label className="input  w-80 outline-none flex-1">
             <input type="search" required placeholder="Search" className="w-full" />
             <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor">
@@ -67,7 +67,9 @@ const SecondHeader = () => {
         {/* Buttons */}
         <div className="flex justify-between gap-2">
           <IconBtn icon={<FaRegHeart />} text={"Wishlist"} className="hidden md:flex" />
+          <Link href={"/addtocart"}>
           <IconBtn icon={<MdAddShoppingCart />} text={"Cart"} />
+          </Link>
           <Link href={"/login"}>
             <IconBtn icon={<IoPerson />} text={"Login"} />
           </Link>
