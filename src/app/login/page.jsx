@@ -3,9 +3,10 @@ import { FaFacebookF, FaGoogle, FaApple } from "react-icons/fa";
 
 export default function LoginForm() {
   return (
-    <div className="flex  items-center justify-center my-30 bg-white p-6 md:p-12 gap-10">
+    <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-center my-20 bg-white py-10">
+
       {/* Left Login Form */}
-      <div className="w-full max-w-md space-y-5">
+      <div className="w-full max-w-md space-y-5 md:mr-10 mb-10 md:mb-0">
         <h2 className="text-3xl font-semibold text-gray-800">Login</h2>
         <p className="text-sm text-gray-500">
           Don’t have an account?{" "}
@@ -44,8 +45,8 @@ export default function LoginForm() {
         </form>
       </div>
 
-      {/* Right Social Login Section */}
-      <div className="w-full max-w-sm mt-20 flex flex-col gap-3">
+      {/* Right Social Login */}
+      <div className="w-full max-w-sm flex flex-col gap-3">
         <button className="flex items-center justify-center gap-2 bg-[#1877F2] text-white py-2 rounded-md font-medium hover:opacity-90 transition">
           <FaFacebookF /> Continue with Facebook
         </button>

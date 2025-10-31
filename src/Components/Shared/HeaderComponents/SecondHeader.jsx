@@ -66,8 +66,10 @@ const SecondHeader = () => {
 
         {/* Buttons */}
         <div className="md:flex justify-between gap-4 hidden pr-3">
+         <Link href={"/wishlist"}>
           <IconBtn icon={<FaRegHeart />} text={"Wishlist"} className="hidden md:flex" />
-          <Link href={"/addtocart"}>
+          </Link>
+           <Link href={"/addtocart"}>
           <IconBtn icon={<MdAddShoppingCart />} text={"Cart"} />
           </Link>
           <Link href={"/login"}>

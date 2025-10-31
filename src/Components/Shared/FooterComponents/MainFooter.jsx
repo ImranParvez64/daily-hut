@@ -9,10 +9,10 @@ const MainFooter = () => {
     return (
         <footer className='bg-white border-t border-gray-200'>
             <div className='container mx-auto px-4 py-10'>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 gap-8'>
+                <div className='grid grid-cols-1 place-items-center md:place-items-start md:grid-cols-2 lg:grid-cols-8 gap-8'>
 
                     {/* Logo & Contact */}
-                    <div className='col-span-1 md:col-span-2 space-y-4'>
+                    <div className='col-span-1 md:col-span-2 space-y-4 place-items-center md:place-items-start'>
                         <Image
                             src="https://i.ibb.co/LDt7Mqkk/Adobe-Express-file-2.png"
                             alt="Logo"
@@ -32,8 +32,8 @@ const MainFooter = () => {
                     </div>
 
                     {/* Install App & Payment */}
-                    <div className='col-span-1 md:col-span-2 space-y-6'>
-                        <div>
+                    <div className='col-span-1 md:col-span-2 space-y-6 '>
+                        <div className='place-items-center md:place-items-start'>
                             <h1 className='text-xl sm:text-2xl font-bold mb-2'>Install App</h1>
                             <p className='text-sm text-gray-600'>From App Store or Google Play</p>
                             <div className='flex flex-col sm:flex-row gap-4 mt-4'>
@@ -54,7 +54,7 @@ const MainFooter = () => {
                             </div>
                         </div>
 
-                        <div>
+                        <div className='place-items-center md:place-items-start'>
                             <p className='text-sm text-gray-600'>Secured Payment Gateways</p>
                             <Image
                                 src="https://nest-frontend-v6.vercel.app/assets/imgs/theme/payment-method.png"

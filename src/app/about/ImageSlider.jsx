@@ -3,19 +3,25 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/autoplay"; // Import CSS for autoplay
-import { Autoplay } from "swiper"; // Correct module for v10+
+import "swiper/css/autoplay";
+import { Autoplay } from "swiper";
 import Image from "next/image";
 
 const ImageSlider = ({ images }) => {
   return (
     <Swiper
       spaceBetween={10}
-      slidesPerView={3}
       loop={true}
       autoplay={{
         delay: 3000,
         disableOnInteraction: false,
+      }}
+      breakpoints={{
+        0: { slidesPerView: 1 },       // Mobile
+        640: { slidesPerView: 1 },     // Small devices
+        768: { slidesPerView: 2 },     // Tablet
+        1024: { slidesPerView: 3 },    // Desktop
+        1280: { slidesPerView: 4 },    // Large screens (optional)
       }}
     >
       {images.map((imgObj, idx) => (

@@ -26,7 +26,7 @@ export default function Categories() {
     <div className="container mx-auto py-6 sm:py-8 md:py-10 px-3">
       
       {/* Responsive Title */}
-      <div className="text-center mb-6 sm:mb-8 md:mb-10">
+      <div className="text-center md:text-start mb-6 sm:mb-8 md:mb-10">
         <Title title="Featured Categories" />
       </div>
 

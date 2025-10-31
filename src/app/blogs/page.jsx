@@ -8,55 +8,57 @@ import { MdOutlineAvTimer } from 'react-icons/md';
 const Page = () => {
     const [blogs, setBlogs] = useState([]);
 
-   useEffect(() => {
-  const getBlogs = async () => {
-    try {
-      const res = await fetch("/blogs.json");
-      if (!res.ok) throw new Error("Failed to fetch blogs");
-      const data = await res.json();
-      setBlogs(data);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-  getBlogs();
-}, []);
-
+    useEffect(() => {
+        const getBlogs = async () => {
+            try {
+                const res = await fetch("/blogs.json");
+                if (!res.ok) throw new Error("Failed to fetch blogs");
+                const data = await res.json();
+                setBlogs(data);
+            } catch (err) {
+                console.error(err);
+            }
+        };
+        getBlogs();
+    }, []);
 
     return (
-        <div className='container mx-auto py-6'>
-            <OthersHero title={'Blogs'} />
+        <div className="container mx-auto py-6">
+            <OthersHero title="Blogs" />
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 mt-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 px-4">
                 {blogs.map(blog => (
-                    <Link 
-                        key={blog.id} 
-                        href={`/blogs/${blog.id}`}  // ✅ Fixed: removed extra curly brace
-                        className="flex flex-col md:flex-row gap-6 border border-gray-100 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
+                    <Link
+                        key={blog.id}
+                        href={`/blogs/${blog.id}`}
+                        className="flex flex-col md:flex-row gap-5 border border-gray-200 p-4 md:p-6 rounded-xl bg-white shadow-sm hover:shadow-md transition-all duration-300"
                     >
                         {/* Image */}
-                        <div className='md:w-1/4 w-full relative h-48 md:h-auto'>
+                        <div className="relative w-full md:w-1/3 h-48 mt-6 md:h-40 rounded-xl overflow-hidden">
                             <Image
-                                src={blog.thumbnail}
+                                src={blog.image}
                                 alt={blog.title}
                                 fill
-                                style={{ objectFit: 'cover', borderRadius: '1rem', padding: '0.5rem' }}
-                                className="rounded-xl border"
+                                className="object-cover"
                             />
                         </div>
 
                         {/* Content */}
-                        <div className='md:w-3/4 w-full flex flex-col justify-between'>
+                        <div className="flex-1 flex flex-col justify-between">
                             <div>
-                                <h2 className="font-bold text-2xl text-gray-600 mb-2 line-clamp-1">{blog.title}</h2>
-                                <p className="text-gray-600 mb-3">{blog.shortDescription}</p>
+                                <h2 className="font-bold text-lg md:text-xl text-gray-700 mb-2 line-clamp-2">
+                                    {blog.title}
+                                </h2>
+                                <p className="text-gray-600 text-sm md:text-base line-clamp-2 mb-3">
+                                    {blog.shortDescription}
+                                </p>
 
                                 {/* Tags */}
-                                <div className='flex flex-wrap gap-2 mb-4'>
-                                    {blog.tags && blog.tags.map((tag, index) => (
-                                        <span 
-                                            key={index} 
-                                            className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full shadow-sm hover:shadow-md transition-shadow cursor-pointer text-sm"
+                                <div className="flex flex-wrap gap-2 mb-3">
+                                    {blog.tags?.map((tag, index) => (
+                                        <span
+                                            key={index}
+                                            className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-sm shadow-sm"
                                         >
                                             {tag}
                                         </span>
@@ -64,15 +66,17 @@ const Page = () => {
                                 </div>
                             </div>
 
-                            <div className='flex justify-between items-center mt-3'>
-                                <p className='font-semibold text-gray-500'>Author: {blog.author.name}</p>
-                                <p className='font-semibold text-gray-500 flex items-center gap-2'>
-                                    <MdOutlineAvTimer className='text-xl' />
-                                    {blog.readTime}
-                                </p>
+                            {/* Footer meta */}
+                            <div className="flex justify-between items-center text-sm text-gray-500 mt-2">
+                                <span>Author: {blog.author.name}</span>
+                                <span className="flex items-center gap-1">
+                                    <MdOutlineAvTimer /> {blog.readTime}
+                                </span>
                             </div>
 
-                            <p className='font-semibold text-gray-500 mt-2'>Published: {blog.published}</p>
+                            <p className="text-gray-500 text-sm mt-1">
+                                Published: {blog.published}
+                            </p>
                         </div>
                     </Link>
                 ))}

@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { FaArrowRight } from 'react-icons/fa6';
+import Link from 'next/link';
 
 const OfferCards = ({offer}) => {
     return (
@@ -19,7 +20,9 @@ const OfferCards = ({offer}) => {
                                         <br />
                                         {offer.titlePart2}
                                     </h1>
+                                    <Link href={'/products'}>
                                     <button className='flex items-center gap-4 btn text-white bg-[#3BB77E]'>Shop Now<FaArrowRight />  </button>
+                                    </Link>
                                 </div>
                             </div>
         </div>

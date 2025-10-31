@@ -106,7 +106,7 @@ const BlogPage = () => {
                     <MdOutlineAvTimer className="text-xl" />
                     <span>{blog.readTime}</span>
                 </div>
-            
+
 
                 {/* Full Content */}
                 <div className="prose max-w-full text-gray-700">
@@ -116,7 +116,7 @@ const BlogPage = () => {
                         </p>
                     ))}
                 </div>
-                    {blog.mainContent && (
+                {blog.mainContent && (
                     <p className="text-gray-700 mb-4 leading-relaxed">{blog.mainContent}</p>
                 )}
             </div>
