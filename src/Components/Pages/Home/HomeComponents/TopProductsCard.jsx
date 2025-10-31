@@ -6,24 +6,24 @@ import { FaStar } from 'react-icons/fa6';
 const TopProductsCard = ({ product }) => {
     const stars = Array.from({ length: 5 }, (_, i) => i + 1);
     return (
-        <div className='flex gap-3  p-5 cursor-pointer border border-gray-100 rounded-2xl'>
+        <div className='flex gap-3  md:p-5 cursor-pointer border border-gray-100 rounded-md p-2 md:rounded-2xl'>
             <div className='shadow-sm '>
                 <Image
                     src={product.img1}
                     width={100}
                     height={200}
-                    className="object-contain transition-transform duration-500 hover:scale-105 "
+                    className="w-40 object-contain transition-transform duration-500 hover:scale-105 "
                     alt={product.name}
                 />
             </div>
             <div className='space-y-3'>
                 <Link href={`/products/${product.id}`}>
-                    <h1 className='text-xl font-semibold text-gray-600 line-clamp-1 hover:text-[#3BB77E]'>{product.name}</h1></Link>
+                    <h1 className='text-sm md:text-xl font-semibold text-gray-600 line-clamp-1 hover:text-[#3BB77E]'>{product.name}</h1></Link>
                 <div className="flex items-center gap-1">
                     {stars.map((star, index) => (
                         <FaStar
                             key={index}
-                            className={`text-sm ${star <= Math.floor(product.rating)
+                            className={`text-xs ${star <= Math.floor(product.rating)
                                 ? "text-yellow-400"
                                 : "text-gray-300"
                                 }`}
