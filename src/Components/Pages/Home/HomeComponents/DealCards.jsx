@@ -1,4 +1,5 @@
-'use client'
+"use client";
+
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { FaStar } from 'react-icons/fa';
@@ -29,53 +30,53 @@ const FlashDealCard = ({ product }) => {
   }, [product.discountEnd]);
 
   return (
-    <div className=" rounded-2xl overflow-hidden shadow-md hover:shadow-md transition-all duration-300 bg-white">
-      <div className="relative">
+    <div className="rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 bg-white flex flex-col">
+      
+      {/* Image */}
+      <div className="relative w-full h-56 sm:h-48">
         <Image
           src={product.img}
           alt={product.name}
-          width={400}
-          height={400}
-          className="rounded-t-2xl w-full"
+          fill
+          className="rounded-t-2xl object-contain p-3"
         />
-
-        {/* Countdown timer */}
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 bg-white/90 p-2 rounded-xl shadow-md">
-          {['Days', 'Hours', 'Mins', 'Sec'].map((label, index) => {
-            const value = [timeLeft.days, timeLeft.hours, timeLeft.mins, timeLeft.secs][index];
+        {/* Countdown Timer */}
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 bg-white/90 p-2 rounded-xl shadow-md text-[10px] sm:text-xs">
+          {['Days', 'Hours', 'Mins', 'Sec'].map((label, i) => {
+            const value = [timeLeft.days, timeLeft.hours, timeLeft.mins, timeLeft.secs][i];
             return (
-              <div key={label} className="text-center px-2">
-                <p className="text-green-600 font-bold text-lg">
+              <div key={label} className="text-center">
+                <p className="text-green-600 font-bold text-xs sm:text-sm">
                   {value.toString().padStart(2, '0')}
                 </p>
-                <span className="text-[11px] text-gray-500">{label}</span>
+                <span className="text-gray-500">{label}</span>
               </div>
-            );
+            )
           })}
         </div>
       </div>
 
-      {/* Product info */}
-      <div className="p-4 space-y-2">
-        <h2 className="font-semibold text-gray-800 text-sm">{product.name}</h2>
+      {/* Product Info */}
+      <div className="p-3 sm:p-4 flex flex-col flex-1 justify-between space-y-2">
+        <h2 className="font-semibold text-gray-800 text-sm sm:text-base line-clamp-2">{product.name}</h2>
 
-        <div className="flex items-center text-yellow-500">
+        <div className="flex items-center text-yellow-500 gap-1">
           {Array.from({ length: 5 }).map((_, i) => (
             <FaStar
               key={i}
               className={i < Math.round(product.rating) ? 'text-yellow-400' : 'text-gray-300'}
             />
           ))}
-          <span className="ml-1 text-sm text-gray-500">({product.rating})</span>
+          <span className="ml-1 text-xs sm:text-sm text-gray-500">({product.rating})</span>
         </div>
 
-        <p className="text-sm text-gray-400">
+        <p className="text-xs sm:text-sm text-gray-400">
           By <span className="text-green-600 font-medium">{product.brand}</span>
         </p>
 
-        <div className="flex items-center gap-2">
-          <p className="text-lg font-bold text-green-600">${product.price}</p>
-          <p className="line-through text-sm text-gray-400">${product.oldPrice}</p>
+        <div className="flex items-center gap-2 mt-1">
+          <p className="text-sm sm:text-base font-bold text-green-600">${product.price}</p>
+          <p className="line-through text-xs sm:text-sm text-gray-400">${product.oldPrice}</p>
         </div>
       </div>
     </div>

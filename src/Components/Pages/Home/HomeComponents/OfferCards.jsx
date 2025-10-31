@@ -14,7 +14,7 @@ const OfferCards = ({offer}) => {
                                     className='object-cover rounded-2xl'
                                 />
                                 <div className="absolute inset-0 flex flex-col justify-center pl-10 items-start rounded-3xl  text-white ">
-                                    <h1 className="text-3xl font-bold mb-4 text-gray-700">
+                                    <h1 className="text-xl md:text-3xl font-bold mb-4 text-gray-700">
                                         {offer.titlePart1}
                                         <br />
                                         {offer.titlePart2}

@@ -1,3 +1,5 @@
+"use client";
+
 import Title from '@/Components/MiniComponents/Title';
 import React from 'react';
 import FlashDealCard from './HomeComponents/DealCards';
@@ -47,16 +49,13 @@ const products = [
 
 const Deal = () => {
     return (
-        <div className='container mx-auto pb-10'>
-            <Title title={"Deals Of The Day"}></Title>
-           <div className='grid grid-cols-4 gap-8 mt-6'>
-             {
-                products.map(product =>(
-
-                    <FlashDealCard key={product.id} product={product}></FlashDealCard>
-                ))
-            }
-           </div>
+        <div className='container mx-auto px-4 pb-10'>
+            <Title title={"Deals Of The Day"} />
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6'>
+                {products.map(product => (
+                    <FlashDealCard key={product.id} product={product} />
+                ))}
+            </div>
         </div>
     );
 };

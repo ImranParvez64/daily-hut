@@ -31,21 +31,21 @@ const SecondHeader = () => {
       <div className="container mx-auto py-4 flex justify-between items-center">
 
         {/* Logo */}
-        <Link href={"/"}>
+        <Link href={"/"} className="pl-2 md:pl-0">
           <Image
             src={"https://i.ibb.co.com/LDt7Mqkk/Adobe-Express-file-2.png"}
             alt="Logo"
             width={800}
             height={200}
-            className="w-80 h-20"
+            className="w-40 md:w-70 md:h-20"
           />
         </Link>
 
         {/* Search + Categories */}
-        <div className="flex gap-2 items-center -translate-x-12">
+        <div className="md:flex gap-2 items-center sm:pr-4 md:pr-0 md:translate-x-20">
 
           {/* Categories */}
-          <select className="select w-40 outline-none font-bold hidden md:block">
+          <select className="select w-40 outline-none font-bold md:block hidden">
             <option>All Categories</option>
             {categories?.map((category) => (
               <option key={category.id}>{category.name}</option>
@@ -53,7 +53,7 @@ const SecondHeader = () => {
           </select>
 
           {/* Search */}
-          <label className="input  w-80 outline-none flex-1">
+          <label className="input  w-40 md:w-80 outline-none flex-1 mr-4 md:mr-0">
             <input type="search" required placeholder="Search" className="w-full" />
             <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor">
@@ -65,7 +65,7 @@ const SecondHeader = () => {
         </div>
 
         {/* Buttons */}
-        <div className="flex justify-between gap-2">
+        <div className="md:flex justify-between gap-4 hidden pr-3">
           <IconBtn icon={<FaRegHeart />} text={"Wishlist"} className="hidden md:flex" />
           <Link href={"/addtocart"}>
           <IconBtn icon={<MdAddShoppingCart />} text={"Cart"} />

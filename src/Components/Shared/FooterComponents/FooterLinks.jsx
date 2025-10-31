@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 
 const FooterLinks = () => {
@@ -53,11 +55,11 @@ const FooterLinks = () => {
     ];
 
     return (
-        <div className='grid grid-cols-4 '>
+        <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6'>
             {footerLinks.map((section) => (
                 <div key={section.title}>
-                    <h3 className="font-semibold text-2xl text-gray-900 mb-10">{section.title}</h3>
-                    <ul className="space-y-2">
+                    <h3 className="font-semibold text-lg sm:text-xl text-gray-900 mb-4">{section.title}</h3>
+                    <ul className="space-y-2 text-sm sm:text-base">
                         {section.links.map((link) => (
                             <li key={link.name}>
                                 <a href={link.url} className="hover:text-teal-500 transition">

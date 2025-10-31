@@ -32,29 +32,32 @@ const Features = () => {
             title: "Easy returns",
             subtitle: "Within 30 days",
             icon: "https://nest-frontend-v6.vercel.app/assets/imgs/theme/icons/icon-5.svg"
-        }
-    ];
+        },
+            {
+            id: 3,
+            title: "Great daily deal",
+            subtitle: "When you sign up",
+            icon: "https://nest-frontend-v6.vercel.app/assets/imgs/theme/icons/icon-3.svg"
+        }]
     return (
-        <div className='container mx-auto my-20'>
-            <div className='flex items-center justify-between gap-8'>
-                {
-                    features.map(feature => (
-                        <div key={feature.id} className='bg-[#F4F6FA] flex gap-5 p-5 rounded-2xl'>
-                            <div>
-                                <Image
+        <div className='container mx-auto my-20 px-4'>
+            <div className='grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>
+                {features.map(feature => (
+                    <div key={feature.id} className='bg-[#F4F6FA] flex gap-4 sm:gap-5 p-4 sm:p-5 rounded-2xl items-center'>
+                        <div className='shrink-0'>
+                            <Image
                                 src={feature.icon}
                                 width={50}
                                 height={50}
-                                alt='feature1'
-                                ></Image>
-                            </div>
-                            <div>
-                                <h1 className='text-xl line-clamp-1 font-semibold text-gray-600'>{feature.title}</h1>
-                                <h3 className='text-gray-400'>{feature.subtitle}</h3>
-                            </div>
+                                alt={feature.title}
+                            />
                         </div>
-                    ))
-                }
+                        <div>
+                            <h1 className='text-lg sm:text-xl font-semibold text-gray-600 line-clamp-1'>{feature.title}</h1>
+                            <h3 className='text-gray-400 text-sm sm:text-base'>{feature.subtitle}</h3>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     );

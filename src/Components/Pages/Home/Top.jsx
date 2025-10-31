@@ -19,10 +19,10 @@ export default function Top() {
 
   return (
     <div className="container mx-auto">
-      <div className="grid grid-cols-4 gap-8">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 ">
         {/* Top Selling */}
-        <div>
-          <div className="border-b border-gray-300 pb-3">
+        <div className="mx-4">
+          <div className="border-b border-gray-300 pb-3   ">
             <Title title={"TopSelling"} />
           </div>
           <div className="grid gap-4 mt-8">
@@ -33,7 +33,7 @@ export default function Top() {
         </div>
 
         {/* Trending Products */}
-        <div>
+        <div className="mx-4">
           <div className="border-b border-gray-300 pb-3">
             <Title title={"Trending Products"} />
           </div>
@@ -45,7 +45,7 @@ export default function Top() {
         </div>
 
         {/* Top Rated */}
-        <div>
+        <div className="mx-4">
           <div className="border-b border-gray-300 pb-3">
             <Title title={"Top Rated"} />
           </div>
@@ -57,7 +57,7 @@ export default function Top() {
         </div>
 
         {/* Recently Added */}
-        <div>
+        <div className="mx-4">
           <div className="border-b border-gray-300 pb-3">
             <Title title={"Recently Added"} />
           </div>

@@ -1,103 +1,91 @@
-// Example.jsx
-'use client'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import Image from 'next/image';
+"use client";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Autoplay, Pagination } from "swiper/modules";
+import Image from "next/image";
 
 export default function Hero() {
-    return (
-        <div>
-            <div className='container mx-auto my-6 '>
-                <Swiper modules={[Autoplay, Pagination]}
-                    spaceBetween={30}
-                    loop={true}
-                    autoplay={{
-                        delay: 2000,
-                        disableOnInteraction: false,
-                    }}
-                    pagination={{ clickable: true }} className="mySwiper">
-                    <SwiperSlide className=' relative w-full h-[500px] '>
-                        <Image
-                            src={"https://nest-frontend-v6.vercel.app/assets/imgs/slider/slider-1.png"}
-                            alt="Logo"
-                            width={1920}
-                            height={1080}
-                            className='object-cover rounded-3xl'
-                        />
-                        <div className="absolute inset-0 flex flex-col justify-center pl-20 items-start rounded-3xl bg-black/20 text-white ">
-                            <h1 className="text-6xl font-bold mb-4 text-gray-700">
-                                Don’t miss amazing
-                                <br />
-                                grocery deals
-                            </h1>
-                            <p className="text-2xl font-semibold mb-6 text-gray-500">Sign up for daily newslater</p>
-                            <div className='flex justify-center items-center'>
-                                <label className="input w-80 validator outline-none bg-white rounded-full border-none pl-5 ">
-                                    <svg className="h-[1em] text-gray-500 text-xl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <g
-                                            strokeLinejoin="round"
-                                            strokeLinecap="round"
-                                            strokeWidth="2.5"
-                                            fill="none"
-                                            stroke="currentColor"
-                                        >
-                                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                                        </g>
-                                    </svg>
-                                    <input type="email" placeholder="enter you mail" required className='placeholder:text-gray-600 text-gray-600' />
-                                </label>
-
-                                <button className="px-6 py-2 bg-[#3BB77E] rounded-full -translate-x-20 cursor-pointer z-10">
-                                    Subscribe
-                                </button>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-
-                    <SwiperSlide className=' relative w-full h-[500px] '>
-                        <Image
-                            src={"https://nest-frontend-v6.vercel.app/assets/imgs/slider/slider-2.png"}
-                            alt="Logo"
-                            width={1920}
-                            height={1080}
-                            className='object-cover rounded-3xl '
-                        />
-                        <div className="absolute inset-0 flex flex-col rounded-3xl justify-center pl-20 items-start  bg-black/20 text-white ">
-                            <h1 className="text-6xl font-bold mb-4 text-gray-700">
-                                Don’t miss amazing
-                                <br />
-                                grocery deals
-                            </h1>
-                            <p className="text-2xl font-semibold mb-6 text-gray-500">Sign up for daily newslater</p>
-                            <div className='flex justify-center items-center'>
-                                <label className="input w-80 validator outline-none bg-white rounded-full border-none pl-5 ">
-                                    <svg className="h-[1em] text-gray-500 text-xl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                        <g
-                                            strokeLinejoin="round"
-                                            strokeLinecap="round"
-                                            strokeWidth="2.5"
-                                            fill="none"
-                                            stroke="currentColor"
-                                        >
-                                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                                        </g>
-                                    </svg>
-                                    <input type="email" placeholder="enter you mail" required className='placeholder:text-gray-600 text-gray-600' />
-                                </label>
-
-                                <button className="px-6 py-2 bg-[#3BB77E] rounded-full -translate-x-20 cursor-pointer z-10">
-                                    Subscribe
-                                </button>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-
-                </Swiper>
+  return (
+    <section className="w-full bg-white">
+      <div className="container mx-auto px-4 my-6">
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          spaceBetween={20}
+          slidesPerView={1}
+          loop={true}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          pagination={{ clickable: true }}
+          className="md:rounded-3xl rounded-xl overflow-hidden"
+        >
+          {/* === Slide 1 === */}
+          <SwiperSlide>
+            <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px]">
+              <Image
+                src="https://nest-frontend-v6.vercel.app/assets/imgs/slider/slider-1.png"
+                alt="Hero Slide 1"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-black/30 flex flex-col justify-center px-5 sm:px-10 md:px-20 text-white md:rounded-3xl rounded-xl">
+                <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-100">
+                  Don’t miss amazing
+                  <br />
+                  grocery deals
+                </h1>
+                <p className="text-sm sm:text-lg md:text-xl mt-3 mb-5 text-gray-200">
+                  Sign up for daily newsletter
+                </p>
+                <div className="flex items-center">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="w-48 sm:w-64 md:w-80 px-4 py-2 rounded-full outline-none bg-white text-gray-700"
+                  />
+                  <button className="-ml-8 sm:-ml-12 bg-[#3BB77E] text-white px-5 py-2 rounded-full font-medium">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
             </div>
-        </div>
-    );
+          </SwiperSlide>
+
+          {/* === Slide 2 === */}
+          <SwiperSlide>
+            <div className="relative w-full h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px]">
+              <Image
+                src="https://nest-frontend-v6.vercel.app/assets/imgs/slider/slider-2.png"
+                alt="Hero Slide 2"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-black/30 flex flex-col justify-center px-5 sm:px-10 md:px-20 text-white md:rounded-3xl rounded-xl">
+                <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-100">
+                  Fresh Arrivals Every Day
+                </h1>
+                <p className="text-sm sm:text-lg md:text-xl mt-3 mb-5 text-gray-200">
+                  Get the best products at amazing prices!
+                </p>
+                <div className="flex items-center">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="w-48 sm:w-64 md:w-80 px-4 py-2 rounded-full outline-none text-gray-700 bg-white"
+                  />
+                  <button className="-ml-8 sm:-ml-12 bg-[#3BB77E] text-white px-5 py-2 rounded-full font-medium">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </div>
+    </section>
+  );
 }

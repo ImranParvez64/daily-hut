@@ -17,8 +17,8 @@ const Offer = () => {
     if (error) return <p className="text-red-500">{error}</p>;
 
     return (
-        <div className='container mx-auto py-10'>
-            <div className='flex justify-between items-center gap-4'>
+        <div className='container mx-auto py-4 md:py-10'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-1 p-4 md:p-0 justify-between items-center gap-4'>
                 {items.slice(0, 3).map((offer) => (
                     <OfferCards key={offer.id} offer={offer} />
                 ))}

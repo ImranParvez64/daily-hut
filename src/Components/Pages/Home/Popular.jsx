@@ -10,12 +10,10 @@ const Popular = () => {
     useEffect(() => {
         const loadData = async () => {
             try {
-                // fetch categories.json from public
                 const catRes = await fetch("/categories.json", { cache: "no-store" });
                 const catData = await catRes.json();
                 setCategories(catData);
 
-                // fetch products.json from public
                 const proRes = await fetch("/products.json", { cache: "no-store" });
                 const proData = await proRes.json();
                 setProducts(proData);
@@ -28,9 +26,9 @@ const Popular = () => {
     }, []);
 
     return (
-        <div className="mb-15">
+        <section className="mb-20">
             <PopularProducts categories={categories} products={products} />
-        </div>
+        </section>
     );
 };
 
