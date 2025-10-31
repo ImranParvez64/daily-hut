@@ -4,28 +4,28 @@ import { IoIosArrowDown } from "react-icons/io";
 const TopHeader = () => {
     return (
         <div className="border-b border-gray-200 text-sm">
-            <div className="container mx-auto flex justify-between items-center py-3 px-4">
+            <div className="container mx-auto flex justify-between items-center py-3 px-4 ">
                 
                 {/* Left side */}
-                <div className="flex items-center gap-4">
+                <div className="hidden md:flex items-center gap-4">
                     <div className="flex items-center gap-3">
                         <MiniNabvar title={"About Us"} symbol={"|"} />
                         <MiniNabvar title={"My Account"} symbol={"|"}/>
                     </div>
-                    <div className="hidden md:flex items-center gap-3">
+                    <div className="md:flex items-center gap-3">
                         <MiniNabvar title={"Wishlist"} symbol={"|"} />
                         <MiniNabvar title={"Order Tracking"} />
                     </div>
                 </div>
 
                 {/* Center text */}
-                <div className="hidden lg:block text-gray-400 text-center">
+                <div className="  text-gray-400 text-center">
                     <p>“Welcome to Daily Hut — Your everyday destination for trendy savings!”</p>
                 </div>
 
                 {/* Right side */}
-                <div className="flex items-center gap-4">
-                    <div className="hidden md:flex">
+                <div className="hidden md:flex items-center gap-4">
+                    <div className=" md:flex">
                         <MiniNabvar title={"Need help? Call Us (+88 019123-00964)"} symbol={"|"} />
                     </div>
                     <div className="flex items-center gap-3">
