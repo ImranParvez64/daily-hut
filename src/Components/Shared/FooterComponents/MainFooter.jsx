@@ -42,14 +42,14 @@ const MainFooter = () => {
                                     alt="Google Play"
                                     width={150}
                                     height={50}
-                                    className='md:w-full w-40 h-auto'
+                                    className='md:w-40 md:h-15 w-40 h-auto'
                                 />
                                 <Image
                                     src="https://nest-frontend-v6.vercel.app/assets/imgs/theme/app-store.jpg"
                                     alt="App Store"
                                     width={150}
                                     height={50}
-                                    className='md:w-full w-40 h-auto'
+                                    className='md:w-40 md:h-15 w-40 h-auto'
                                 />
                             </div>
                         </div>
