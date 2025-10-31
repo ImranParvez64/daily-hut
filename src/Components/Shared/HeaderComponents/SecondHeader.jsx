@@ -35,14 +35,14 @@ const SecondHeader = () => {
           <Image
             src={"https://i.ibb.co.com/LDt7Mqkk/Adobe-Express-file-2.png"}
             alt="Logo"
-            width={700}
+            width={800}
             height={200}
-            className="w-28 h-10 sm:w-36 sm:h-12"
+            className="w-80 h-20"
           />
         </Link>
 
         {/* Search + Categories */}
-        <div className="flex gap-2 items-center translate-x-10">
+        <div className="flex gap-2 items-center -translate-x-12">
 
           {/* Categories */}
           <select className="select w-40 outline-none font-bold hidden md:block">

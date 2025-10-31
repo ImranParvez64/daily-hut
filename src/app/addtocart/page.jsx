@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { FaTrash } from "react-icons/fa";
+import Subscribe from "@/Components/Pages/Home/Subscribe";
 
 const CartPage = () => {
   const product = {
@@ -16,7 +17,7 @@ const CartPage = () => {
   const subtotal = product.price * product.quantity;
 
   return (
-    <div className="max-w-6xl mx-auto p-5 py-30">
+    <div className="max-w-7xl mx-auto p-5 py-30">
       <h1 className="text-2xl font-bold mb-3 text-gray-600">Your Cart</h1>
       <p className="text-gray-500 mb-5">There is 1 product in your cart</p>
 
@@ -98,6 +99,7 @@ const CartPage = () => {
           </button>
         </div>
       </div>
+      <Subscribe></Subscribe>
     </div>
   );
 };

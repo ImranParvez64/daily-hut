@@ -10,7 +10,7 @@ const TopHeader = () => {
                 <div className="flex items-center gap-4">
                     <div className="flex items-center gap-3">
                         <MiniNabvar title={"About Us"} symbol={"|"} />
-                        <MiniNabvar title={"My Account"} />
+                        <MiniNabvar title={"My Account"} symbol={"|"}/>
                     </div>
                     <div className="hidden md:flex items-center gap-3">
                         <MiniNabvar title={"Wishlist"} symbol={"|"} />
