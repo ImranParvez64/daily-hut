@@ -18,14 +18,15 @@ export default function Top() {
   if (error) return <p className="text-red-500">Error: {error}</p>;
 
   return (
-    <div className="container mx-auto">
-      <div className="grid grid-cols-2 md:grid-cols-4 md:gap-8 gap-2">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
         {/* Top Selling */}
-        <div className="mx-4">
-          <div className="md:border-b border-gray-300 md:pb-3  ">
-            <Title title={"TopSelling"} />
+        <div>
+          <div className="border-b border-gray-300 pb-2">
+            <Title title={"Top Selling"} />
           </div>
-          <div className="grid gap-4 mt-8">
+          <div className="grid gap-4 mt-4">
             {items.slice(0, 3).map((product) => (
               <TopProductsCard key={product.id} product={product} />
             ))}
@@ -33,11 +34,11 @@ export default function Top() {
         </div>
 
         {/* Trending Products */}
-        <div className="mx-4">
-          <div className="md:border-b border-gray-300  md:pb-3  line-clamp-1">
+        <div>
+          <div className="border-b border-gray-300 pb-2">
             <Title title={"Trending Products"} />
           </div>
-          <div className="grid gap-4 mt-8">
+          <div className="grid gap-4 mt-4">
             {items.slice(4, 7).map((product) => (
               <TopProductsCard key={product.id} product={product} />
             ))}
@@ -45,11 +46,11 @@ export default function Top() {
         </div>
 
         {/* Top Rated */}
-        <div className="mx-4 mt-4 md:mt-0">
-          <div className="md:border-b border-gray-300 md:pb-3">
+        <div>
+          <div className="border-b border-gray-300 pb-2">
             <Title title={"Top Rated"} />
           </div>
-          <div className="grid gap-4 mt-8">
+          <div className="grid gap-4 mt-4">
             {items.slice(8, 11).map((product) => (
               <TopProductsCard key={product.id} product={product} />
             ))}
@@ -57,16 +58,17 @@ export default function Top() {
         </div>
 
         {/* Recently Added */}
-        <div className="mx-4 mt-4 md:mt-0">
-          <div className="md:border-b border-gray-300 md:pb-3">
+        <div>
+          <div className="border-b border-gray-300 pb-2">
             <Title title={"Recently Added"} />
           </div>
-          <div className="grid gap-4 mt-8">
+          <div className="grid gap-4 mt-4">
             {items.slice(9, 13).map((product) => (
               <TopProductsCard key={product.id} product={product} />
             ))}
           </div>
         </div>
+
       </div>
     </div>
   );
