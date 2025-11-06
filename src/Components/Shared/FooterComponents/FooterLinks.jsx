@@ -55,7 +55,7 @@ const FooterLinks = () => {
     ];
 
     return (
-        <div className='grid sm:grid-cols-2 md:grid-cols-4 gap-6'>
+        <div className='grid sm:grid-cols-2 md:grid-cols-4 gap-6 place-items-center md:place-items-start'>
             {footerLinks.map((section) => (
                 <div key={section.title}>
                     <h3 className="font-semibold text-lg sm:text-xl text-gray-900 mb-4">{section.title}</h3>

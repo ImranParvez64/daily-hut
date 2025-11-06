@@ -20,14 +20,14 @@ const MainFooter = () => {
                             height={200}
                             className='w-40 h-auto object-contain'
                         />
-                        <p className='text-gray-600 text-sm sm:text-base'>
+                        <p className='text-gray-600 text-sm sm:text-base '>
                             DailyHut — everything you need, just a click away.
                         </p>
                         <ContactInfo />
                     </div>
 
                     {/* Footer Links */}
-                    <div className='col-span-1 md:col-span-2 lg:col-span-4 mt-6 md:mt-0'>
+                    <div className='col-span-2 md:col-span-2 lg:col-span-4 mt-6 md:mt-0'>
                         <FooterLinks />
                     </div>
 

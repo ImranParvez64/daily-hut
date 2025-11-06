@@ -8,13 +8,18 @@ import { MdAddShoppingCart } from "react-icons/md";
 import { IoPerson } from "react-icons/io5";
 import { IoMdPersonAdd } from "react-icons/io";
 import Link from "next/link";
+<<<<<<< HEAD
 import { useSelector } from "react-redux";
+=======
+import { useSelector } from "react-redux"; // 🟢 redux import
+>>>>>>> d3d9b06df8d40f53d365696d498957a61a53e569
 
 const SecondHeader = () => {
   const cartCount = useSelector((state) =>
     state.cart.cartItems.reduce((sum, item) => sum + item.quantity, 0)
   );
   const [categories, setCategories] = useState([]);
+  const { totalQuantity } = useSelector((state) => state.cart); // 🟢 cart count
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -55,6 +60,7 @@ const SecondHeader = () => {
           </select>
 
           {/* Search */}
+<<<<<<< HEAD
           <label className="input  w-40 md:w-80 outline-none flex-1 mr-4 md:mr-0">
             <input
               type="search"
@@ -62,6 +68,10 @@ const SecondHeader = () => {
               placeholder="Search"
               className="w-full"
             />
+=======
+          <label className="input w-40 md:w-80 outline-none flex-1 mr-4 md:mr-0">
+            <input type="search" required placeholder="Search" className="w-full" />
+>>>>>>> d3d9b06df8d40f53d365696d498957a61a53e569
             <svg
               className="h-[1em] opacity-50"
               xmlns="http://www.w3.org/2000/svg"
@@ -84,6 +94,7 @@ const SecondHeader = () => {
         {/* Buttons */}
         <div className="md:flex justify-between gap-4 hidden pr-3">
           <Link href={"/wishlist"}>
+<<<<<<< HEAD
             <IconBtn
               icon={<FaRegHeart />}
               text={"Wishlist"}
@@ -97,10 +108,25 @@ const SecondHeader = () => {
             <div className="absolute -top-2 -right-5 bg-red-500 text-white text-xs font-semibold px-[6px] py-[1px] rounded-full shadow-md transition-all duration-300">
               {cartCount}
             </div>
+=======
+            <IconBtn icon={<FaRegHeart />} text={"Wishlist"} />
           </Link>
+
+          {/* 🛒 Cart with Badge */}
+          <Link href={"/addtocart"} className="relative">
+            <IconBtn icon={<MdAddShoppingCart />} text={"Cart"} />
+            {totalQuantity > 0 && (
+              <span className="absolute -top-2 -right-2 bg-[#25AD7A] text-white text-[10px] font-semibold rounded-full h-4 w-4 flex items-center justify-center">
+                {totalQuantity}
+              </span>
+            )}
+>>>>>>> d3d9b06df8d40f53d365696d498957a61a53e569
+          </Link>
+
           <Link href={"/login"}>
             <IconBtn icon={<IoPerson />} text={"Login"} />
           </Link>
+
           <Link href={"/register"}>
             <IconBtn icon={<IoMdPersonAdd />} text={"Register"} />
           </Link>
