@@ -8,9 +8,11 @@ import { MdAddShoppingCart } from "react-icons/md";
 import { IoPerson } from "react-icons/io5";
 import { IoMdPersonAdd } from "react-icons/io";
 import Link from "next/link";
+import { useSelector } from "react-redux"; // 🟢 redux import
 
 const SecondHeader = () => {
   const [categories, setCategories] = useState([]);
+  const { totalQuantity } = useSelector((state) => state.cart); // 🟢 cart count
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -43,7 +45,6 @@ const SecondHeader = () => {
 
         {/* Search + Categories */}
         <div className="md:flex gap-2 items-center sm:pr-4 md:pr-0 md:translate-x-20">
-
           {/* Categories */}
           <select className="select w-40 outline-none font-bold md:block hidden">
             <option>All Categories</option>
@@ -53,10 +54,20 @@ const SecondHeader = () => {
           </select>
 
           {/* Search */}
-          <label className="input  w-40 md:w-80 outline-none flex-1 mr-4 md:mr-0">
+          <label className="input w-40 md:w-80 outline-none flex-1 mr-4 md:mr-0">
             <input type="search" required placeholder="Search" className="w-full" />
-            <svg className="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="currentColor">
+            <svg
+              className="h-[1em] opacity-50"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g
+                strokeLinejoin="round"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                fill="none"
+                stroke="currentColor"
+              >
                 <circle cx="11" cy="11" r="8"></circle>
                 <path d="m21 21-4.3-4.3"></path>
               </g>
@@ -66,20 +77,28 @@ const SecondHeader = () => {
 
         {/* Buttons */}
         <div className="md:flex justify-between gap-4 hidden pr-3">
-         <Link href={"/wishlist"}>
-          <IconBtn icon={<FaRegHeart />} text={"Wishlist"} className="hidden md:flex" />
+          <Link href={"/wishlist"}>
+            <IconBtn icon={<FaRegHeart />} text={"Wishlist"} />
           </Link>
-           <Link href={"/addtocart"}>
-          <IconBtn icon={<MdAddShoppingCart />} text={"Cart"} />
+
+          {/* 🛒 Cart with Badge */}
+          <Link href={"/addtocart"} className="relative">
+            <IconBtn icon={<MdAddShoppingCart />} text={"Cart"} />
+            {totalQuantity > 0 && (
+              <span className="absolute -top-2 -right-2 bg-[#25AD7A] text-white text-[10px] font-semibold rounded-full h-4 w-4 flex items-center justify-center">
+                {totalQuantity}
+              </span>
+            )}
           </Link>
+
           <Link href={"/login"}>
             <IconBtn icon={<IoPerson />} text={"Login"} />
           </Link>
+
           <Link href={"/register"}>
             <IconBtn icon={<IoMdPersonAdd />} text={"Register"} />
           </Link>
         </div>
-
       </div>
     </div>
   );
