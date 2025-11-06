@@ -25,7 +25,7 @@ export default function ProductDetails({ product }) {
   };
 
   return (
-    <div className="max-w-4xl mx-auto bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-md border">
+    <div className="max-w-4xl mx-auto bg-white p-4 sm:p-6 md:p-8 rounded-2xl  ">
       {/* Badge */}
       {product.badge && (
         <span className="inline-block bg-pink-100 text-pink-600 text-xs sm:text-sm font-semibold px-3 py-1 rounded-md mb-3">
