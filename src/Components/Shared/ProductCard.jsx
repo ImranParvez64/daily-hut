@@ -1,9 +1,16 @@
+import { addToCart } from "@/redux/slice/addtocartSlice";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaCartPlus, FaStar } from "react-icons/fa";
+import { useDispatch } from "react-redux";
 
 const ProductCard = ({ product }) => {
+   const dispatch = useDispatch();
+
+  const handleAdd = () => {
+    dispatch(addToCart(product));
+  };
   const stars = Array.from({ length: 5 }, (_, i) => i + 1);
 
   return (
@@ -64,7 +71,7 @@ const ProductCard = ({ product }) => {
               </span>
             </div>
 
-            <button className="flex items-center gap-1 bg-[#DEF9EC] px-2 py-1 sm:px-3 sm:py-1.5 rounded-md font-semibold hover:bg-[#3BB77E] hover:text-white text-[10px] sm:text-xs transition-all duration-300">
+            <button onClick={handleAdd} className="flex items-center gap-1 bg-[#DEF9EC] px-2 py-1 sm:px-3 sm:py-1.5 rounded-md font-semibold hover:bg-[#3BB77E] hover:text-white text-[10px] sm:text-xs transition-all duration-300">
               <FaCartPlus className="text-[10px] sm:text-xs" /> Add
             </button>
           </div>

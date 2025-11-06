@@ -12,6 +12,6 @@ export const store = configureStore({
     products: productReducer,
     categories: categoriesReducer,
     product:singleProductSliceReducer,
-    addToCart: addtocartReducer
+    cart: addtocartReducer
   },
 });
